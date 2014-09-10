@@ -15,25 +15,7 @@ node 'server-1.wekanban.com' {
 
 
 node 'server-2.wekanban.com' {
-
-  account {
-    'solr':
-      home_dir => '/home/solr',
-      groups   => [ 'wheel' ],
-      password => 'solr@2015',
-      comment  => 'Solr user',
-  }
-  
-  class {'epel':stage => 'pre',}
-  class {'wget':stage => 'pre',}
-  
-  #class {'solr':}
-  
-  class { 'java':distribution => 'jre',}
-  
-  #Class['wget'] -> Class['java'] -> Class['solr']
-  service { 'iptables' :
-    ensure => 'stopped',
-    enable => false,
-  }
+  include wget
+  class {'onur':}
 }
+
