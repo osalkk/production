@@ -17,16 +17,20 @@ node 'server-2.wekanban.com' {
       password => 'solr@2015',
       comment  => 'Solr user',
   }
-  include stages 
+  
   class {'epel':
     stage => 'pre',
   }
 
-  package {'wget':
-    ensure => present,
+  class wget {
+    package {'wget':
+      ensure => present,
+    }
   }
 
-  include solr
+  class {'solr':
+    contain wget
+  }
   
   class { 'java':
     distribution => 'jre',
