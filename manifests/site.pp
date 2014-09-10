@@ -10,6 +10,7 @@ node 'server-1.wekanban.com' {
 
 
 node 'server-2.wekanban.com' {
+  include stages
   include yum
   include wget
   Class['yum'] -> Class['wget']
