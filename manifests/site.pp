@@ -30,7 +30,14 @@ node 'server-2.wekanban.com' {
 
   include epel
   
+  class { 'java':
+    distribution => 'jre',
+  }
 
+  service { 'iptables' :
+    ensure => 'stopped',
+    enable => 'false',
+  }
 
 }
 
