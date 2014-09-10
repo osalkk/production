@@ -27,7 +27,7 @@ node 'server-2.wekanban.com' {
       ensure => present,
     }
   }
-
+  include wget
   class {'solr':
     contain wget,
   }
