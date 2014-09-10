@@ -22,24 +22,20 @@ node 'server-2.wekanban.com' {
     stage => 'pre',
   }
 
-  class wget {
-    package {'wget':
-      ensure => present,
-    }
-  }
+
   include wget
+  
   class {'solr':
-    contain wget,
+    contain wget
   }
   
   class { 'java':
     distribution => 'jre',
   }
   
-  Package['wget'] -> Class['java'] -> Class['solr']
-   
+  Class['wget'] -> Class['java'] -> Class['solr']
   service { 'iptables' :
     ensure => 'stopped',
-    enable => 'false',
+    enable => false,
   }
 }
