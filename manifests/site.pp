@@ -29,7 +29,7 @@ node 'server-2.wekanban.com' {
   }
 
   class {'solr':
-    contain wget
+    contain wget,
   }
   
   class { 'java':
