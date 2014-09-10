@@ -1,5 +1,5 @@
 class wget {
-    package { "wget": 
-        ensure => latest
+    package { 'wget': 
+        ensure => latest,
     }
 }
