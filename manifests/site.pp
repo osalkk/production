@@ -1,10 +1,4 @@
-class stages {
-  stage { 'pre':
-    before => Stage['main'],
-  }
-}
-
-include stages
+import 'stages.pp'
 
 node 'server-1.wekanban.com' {
   include yum
