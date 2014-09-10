@@ -22,7 +22,9 @@ node 'server-2.wekanban.com' {
       comment  => 'Solr user',
   }
 
-  include epel
+  class {'epel':
+    stage => 'pre',
+  }
   
   class { 'java':
     distribution => 'jre',
