@@ -39,11 +39,11 @@ node 'server-2.wekanban.com' {
     enable => 'false',
   }
   
-  class { "solr":
-  install             => "source",
-  install_source      => "http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0.tgz",
-  install_destination => "/opt/solr/",
-  }  
+  #class { "solr":
+   # install             => "source",
+   # install_source      => "http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0.tgz",
+   # install_destination => "/opt/solr/",
+  #}  
 
 
 }
