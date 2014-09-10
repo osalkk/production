@@ -15,7 +15,7 @@ node 'server-1.wekanban.com' {
 
 
 node 'server-2.wekanban.com' {
-  class {'stages':}
+#  class {'stages':}
 
   account {
     'solr':
