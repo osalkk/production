@@ -30,17 +30,13 @@ node 'server-2.wekanban.com' {
   }
 
 
-  class {'wget':
-    stage => 'pre',
-  }
+  class {'wget':stage => 'pre',}
   
   class {'solr':}
   
-  class { 'java':
-    distribution => 'jre',
-  }
+  class { 'java':distribution => 'jre',}
   
-  Class['wget'] -> Class['java'] -> Class['solr']
+  #Class['wget'] -> Class['java'] -> Class['solr']
   service { 'iptables' :
     ensure => 'stopped',
     enable => false,
