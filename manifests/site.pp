@@ -1,3 +1,8 @@
+class stages {
+  stage { 'pre':
+    before => Stage['main'],
+  }
+}
 
 
 node 'server-1.wekanban.com' {
