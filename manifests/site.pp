@@ -18,6 +18,7 @@ node 'server-1.wekanban.com' {
 node 'server-2.wekanban.com' {
   include yum
   include wget
+  Class['yum'] -> Class['wget']
   class {'tempfile':}
 }
 
