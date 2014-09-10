@@ -1,5 +1,4 @@
 
-include stages
 
 node 'server-1.wekanban.com' {
   include role::general
@@ -10,6 +9,8 @@ node 'server-1.wekanban.com' {
 
 
 node 'server-2.wekanban.com' {
+  class {'stages':}
+
   account {
     'solr':
       home_dir => '/home/solr',
