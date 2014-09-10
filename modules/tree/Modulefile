@@ -1,0 +1,6 @@
+name         'rfletcher-tree'
+version      '0.0.1'
+license      'MIT License'
+summary      'A puppet module for Tree'
+description  'Install or remove Tree'
+project_page 'https://github.com/rfletcher/puppet-tree'

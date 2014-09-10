@@ -1,6 +1,6 @@
-# == Class: motd
+# == Class: accounts
 #
-# Full description of class motd here.
+# Full description of class accounts here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { motd:
+#  class { accounts:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -35,13 +35,6 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class motd {
-  file {'/etc/motd':
-    content => "   ____                         _____  ___     __     __ __
-  / __ \ ____   __  __ _____   / ___/ /   |   / /    / //_/
- / / / // __ \ / / / // ___/   \__ \ / /| |  / /    / ,<   
-/ /_/ // / / // /_/ // /      ___/ // ___ | / /___ / /| |  
-\____//_/ /_/ \__,_//_/      /____//_/  |_|/_____//_/ |_|  
-                                                           \n"
- }
+class host {
+
 }

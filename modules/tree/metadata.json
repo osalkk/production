@@ -1,0 +1,24 @@
+{
+  "name": "rfletcher-tree",
+  "version": "0.0.1",
+  "source": "UNKNOWN",
+  "author": "rfletcher",
+  "license": "MIT License",
+  "summary": "A puppet module for Tree",
+  "description": "Install or remove Tree",
+  "project_page": "https://github.com/rfletcher/puppet-tree",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "LICENSE.txt": "3d30e480387ce846238ec8663c2d92a4",
+    "Modulefile": "3a277ec607a464fc646002641f4d9d19",
+    "README.md": "14c7ccd8cb5f744166e38d0f31168330",
+    "manifests/init.pp": "a26744e938607c7ec8011d40a51c1b58",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "tests/init.pp": "f7ce0a1bff0691678b43bf8cbdfdcb51"
+  }
+}
