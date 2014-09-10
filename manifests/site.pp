@@ -26,12 +26,19 @@ node 'server-2.wekanban.com' {
   class {'epel':
     stage => 'pre',
   }
+
+  package {'wget':
+    ensure => present,
+  }
+
   include solr
   
   class { 'java':
     distribution => 'jre',
   }
-
+  
+  Package['wget'] -> Class['java'] -> Class['solr']
+   
   service { 'iptables' :
     ensure => 'stopped',
     enable => 'false',
