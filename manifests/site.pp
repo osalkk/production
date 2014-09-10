@@ -25,9 +25,9 @@ node 'server-2.wekanban.com' {
   }
   
   class {'epel':stage => 'pre',}
- #class {'wget':stage => 'pre',}
+  class {'wget':stage => 'pre',}
   
-  class {'solr':}
+  #class {'solr':}
   
   class { 'java':distribution => 'jre',}
   
