@@ -20,5 +20,17 @@ node 'server-2.wekanban.com' {
   include wget
   Class['yum'] -> Class['wget']
   class {'tempfile':}
+  account {
+    'solr':
+      home_dir => '/home/solr',
+      groups   => [ 'wheel' ],
+      password => 'solr@2015',
+      comment  => 'Solr user',
+  }
+
+  include epel
+  
+
+
 }
 
