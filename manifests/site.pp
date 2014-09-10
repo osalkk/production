@@ -4,6 +4,7 @@ class stages {
   }
 }
 
+include stages
 
 node 'server-1.wekanban.com' {
   include role::general
