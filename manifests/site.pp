@@ -1,10 +1,5 @@
 
-class stages {
-  stage { 'pre':
-    before => Stage['main'],
-  }
-}
-
+include stages
 
 node 'server-1.wekanban.com' {
   include role::general
