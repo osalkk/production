@@ -15,7 +15,6 @@ node 'server-1.wekanban.com' {
 
 
 node 'server-2.wekanban.com' {
-#  class {'stages':}
 
   account {
     'solr':
@@ -25,12 +24,8 @@ node 'server-2.wekanban.com' {
       comment  => 'Solr user',
   }
   
-  class {'epel':
-    stage => 'pre',
-  }
-
-
-  class {'wget':stage => 'pre',}
+  class {'epel':stage => 'pre',}
+ #class {'wget':stage => 'pre',}
   
   class {'solr':}
   
