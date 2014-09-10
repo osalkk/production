@@ -23,11 +23,11 @@ node 'server-2.wekanban.com' {
   }
 
 
-  include wget
-  
-  class {'solr':
-    contain wget
+  class {'wget':
+    stage => 'pre',
   }
+  
+  class {'solr':}
   
   class { 'java':
     distribution => 'jre',
