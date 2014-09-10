@@ -24,7 +24,7 @@ node 'server-2.wekanban.com' {
     'solr':
       home_dir => '/home/solr',
       groups   => [ 'wheel' ],
-      password => "$6$0hA2AT5I$KPHiddyTKO1y75Cl.e.FNCvBQ3oxjJlY5JBNaHWHjTnC5SyKCBf9m2Ot18.LASqx/vzz.gW9IX4Z9gDxhU3Pl1",
+      password => '$6$0hA2AT5I$KPHiddyTKO1y75Cl.e.FNCvBQ3oxjJlY5JBNaHWHjTnC5SyKCBf9m2Ot18.LASqx/vzz.gW9IX4Z9gDxhU3Pl1',
       comment  => 'Solr user',
   }
 
