@@ -38,7 +38,7 @@ node 'server-2.wekanban.com' {
   
   exec { 'solr-install':
     cwd => '/opt',
-    command => '/usr/bin/wget http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0.tgz && /bin/tar xvzf http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0 && rm -rf solr-4.10.0.tgz && mv solr-4.10.0 solr && cd solr && mv example core ',
+    command => '/usr/bin/wget http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0.tgz && /bin/tar xvzf http://apache.bilkent.edu.tr/lucene/solr/4.10.0/solr-4.10.0.tgz && rm -rf solr-4.10.0.tgz && mv solr-4.10.0 solr && cd solr && mv example core ',
     creates => '/opt/solr',
     timeout => 0,
   }
