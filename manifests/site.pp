@@ -1,6 +1,6 @@
 import 'stages.pp'
 
-node 'server-1.wekanban.com' {i
+node 'server-1.wekanban.com' {
   include stages
   include yum
   include role::general
