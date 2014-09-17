@@ -37,7 +37,7 @@ node 'server-2.wekanban.com' {
     creates => '/opt/solr',
     timeout => 0,
   }
-  include changefile
+  include changeline
   replace_matching_line { 'rootlogger':
     file => '/opt/solr/core/log4j.properties',
     match => '^=INFO',
