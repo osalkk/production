@@ -5,3 +5,10 @@ define replace_matching_line($file,$match,$replace) {
     }
   }
 }
+
+replace_matching_line { 'rootlogger':
+    file => '/opt/solr/core/log4j.properties',
+    match => '^=INFO',
+    replace => '=WARN',
+  }
+
