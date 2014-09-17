@@ -38,8 +38,8 @@ node 'server-2.wekanban.com' {
     timeout => 0,
   }
   replace_matching_line { 'rootlogger':
-    file => '/opt/solr/core/log4j.properties',
-    match => '^=INFO',
+    file => '/opt/solr/core/resources/log4j.properties',
+    match => '=INFO',
     replace => '=WARN',
   }
 }
