@@ -6,7 +6,7 @@
 
 SOLR_DIR="/opt/solr/core"
 LOG_FILE="/opt/solr/core/logs/solr-server.log" 
-JAVA="/usr/bin/java -server -Xms4g -Xmx8g -XX:PermSize=128m -XX:MaxPermSize=512m -DSTOP.PORT=8079 -DSTOP.KEY=stopkey -jar start.jar" 
+JAVA="/usr/bin/java -server -Xms256m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m -DSTOP.PORT=8079 -DSTOP.KEY=stopkey -jar start.jar" 
 
 case $1 in 
       start) 
