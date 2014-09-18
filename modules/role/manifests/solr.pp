@@ -33,8 +33,8 @@ class role::solr {
 
   file { '/etc/init.d/solr':
     ensure => file,
-    owner  => 'solr',
-    group  => 'solr',
+    owner  => 'root',
+    group  => 'root',
     mode   => '755',
     source => 'puppet:///modules/role/solr',
   }
