@@ -30,4 +30,12 @@ class role::solr {
     match => '=INFO',
     replace => '=WARN',
   }
+
+  file { '/etc/init.d/solr'
+    ensure => present,
+    owner  => 'solr',
+    group  => 'solr',
+    mode   => '640',
+    source => 'puppet:///modules/role/solr'
+  }
 }
