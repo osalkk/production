@@ -27,8 +27,8 @@ class role::solr {
   }
   replace_matching_line { 'rootlogger':
     file => '/opt/solr/core/resources/log4j.properties',
-    match => '=INFO',
-    replace => '=WARN',
+    match => 'rootLogger=INFO',
+    replace => 'rootLogger=WARN',
   }
 
   file { '/etc/init.d/solr':
