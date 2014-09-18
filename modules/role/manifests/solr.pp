@@ -36,6 +36,6 @@ class role::solr {
     owner  => 'solr',
     group  => 'solr',
     mode   => '640',
-    source => 'puppet:///modules/role/solr'
+    source => 'puppet:///modules/role/solr',
   }
 }
