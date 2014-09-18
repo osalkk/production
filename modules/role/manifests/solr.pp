@@ -35,7 +35,7 @@ class role::solr {
     ensure => file,
     owner  => 'solr',
     group  => 'solr',
-    mode   => '640',
+    mode   => '755',
     source => 'puppet:///modules/role/solr',
   }
 }
