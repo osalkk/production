@@ -32,7 +32,7 @@ class role::solr {
   }
 
   file { '/etc/init.d/solr'
-    ensure => present,
+    ensure => file,
     owner  => 'solr',
     group  => 'solr',
     mode   => '640',
