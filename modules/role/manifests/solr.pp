@@ -38,4 +38,8 @@ class role::solr {
     mode   => '755',
     source => 'puppet:///modules/role/solr',
   }
+  file { '/etc/rc.d/rc3.d/S20solr':
+    ensure => link,
+    target => '/etc/init.d/solr',
+  }
 }
