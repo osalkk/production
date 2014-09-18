@@ -31,7 +31,7 @@ class role::solr {
     replace => '=WARN',
   }
 
-  file { '/etc/init.d/solr'
+  file { '/etc/init.d/solr':
     ensure => file,
     owner  => 'solr',
     group  => 'solr',
